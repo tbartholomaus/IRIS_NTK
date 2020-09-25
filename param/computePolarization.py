@@ -52,8 +52,8 @@ windowShift      = int(windowLength * 0.5) # 50% overlap
 # 
 #  NOTE: make sure that components in each group are in the CORRECT order (BHZ, BHE, BHN)
 # 
-channel          = "BH?"
-channelGroups    = [["BHZ","BHE","BHN"],["BHZ","BH2","BH1"]]
+channel          = "HH?"
+channelGroups    = [["HHZ","HHE","HHN"],["HHZ","HH2","HH1"]]
 
 #
 # decon filter frequency bands, Hz
@@ -91,7 +91,7 @@ xlimMax        = {}
 
 variables      = ["powerUD","powerEW","powerNS","powerLambda","betaSquare","thetaH","thetaV","phiVH","phiHH"]
 
-periodMin      = 0.1
+periodMin      = 0.01
 periodMax      = 100
 for var in variables:
    xlimMin.update({var:{"period":periodMin,"frequency":1.0/periodMax}})
@@ -134,10 +134,10 @@ yLabel       = {"powerUD":"UD " + powerUnits['M/S'],
 # decon filter
 # define a filter band to prevent amplifying noise during the deconvolution
 #
-deconFilter1 = 0.001 # you may set ALL deconFilter parameter values to <= 0 to bypass this filter
-deconFilter2 = 0.005
-deconFilter3 = 8.0
-deconFilter4 = 10.0
+deconFilter1 = 0.01 # you may set ALL deconFilter parameter values to <= 0 to bypass this filter
+deconFilter2 = 0.05
+deconFilter3 = 80.0
+deconFilter4 = 100.0
 
 #
 # normalization factor to be included while converting power to PSD
