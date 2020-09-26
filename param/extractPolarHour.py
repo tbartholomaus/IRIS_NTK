@@ -18,7 +18,7 @@ decimalPlaces    = {"powerUD":0, # number of decimal places in the output file
                     "powerEW":0,
                     "powerNS":0,
                     "powerLambda":0,
-                    "betaSquare":1,
+                    "betaSquare":2,
                     "thetaH":0,
                     "thetaV":0,
                     "phiVH":0,
