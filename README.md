@@ -5,10 +5,10 @@ Customization of these commands is expected through the command line, such as ne
 
 ### Compute polarization attributes: `ntk_computePolarization.py`
 Run in 1-hr bins, with 50% overlap.
->python bin/ntk_computePolarization.py param=computePolarization net=ZQ sta=RTBD loc=DASH start=2016-06-20T00:00:00 end=2016-10-04T00:00:00 type=frequency mode=0
+>python bin/ntk_computePolarization.py param=computePolarization net=ZQ sta=RTBD loc=DASH cha=HH? start=2016-06-20T00:00:00 end=2016-10-04T00:00:00 type=frequency mode=0
 
 Another version of this command, for use through an ssh connection, could be as follows.
-> nohup python -u bin/ntk_computePolarization.py param=computePolarization net=ZQ sta=RTBD loc=DASH start=2016-06-20T00:00:00 end=2016-10-04T00:00:00 type=frequency mode=0 > RTBD2.log &
+> nohup python -u bin/ntk_computePolarization.py param=computePolarization net=ZQ sta=RTBD loc=DASH cha=HH? start=2016-06-20T00:00:00 end=2016-10-04T00:00:00 type=frequency mode=0 > RTBD2.log &
 
 ### Extract polarization attributes for a station: `ntk_extractPolarHour.py`
 Pull out all polarization attributes as a function of both time and frequency/period.
