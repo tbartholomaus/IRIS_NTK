@@ -14,7 +14,7 @@ import pandas as pd
 #%%
 
 datatype = 'betaSquare'
-datatype = 'thetaH'
+# datatype = 'thetaH'
 net_sta_loc = 'NM.SLM.--'
 chans = 'BHZ_BHE_BHN'
 filename = net_sta_loc + '.' + chans + '.2008-12-31T00_00_00.2009-01-10T00_00_00.frequency.txt'

@@ -8,12 +8,12 @@ version = "R 0.7.0"
 #
 def usage():
    print("\n\nUSAGE for version: %s\n\n"%(version))
-   print("                                         configuration file name           net     sta      loc     startDateTime           endDateTime             x-axis type       0       run with minimum message output")
-   print("                                                         |                 |       |        |         |                        |                       |           |  plot    run in plot mode")
-   print("                                                         |                 |       |        |         |                        |                       |           |  time    run in timing mode (to output run time for different segments of the script ")
-   print("                                                         |                 |       |        |         |                        |                       |           |  verbose run in verbose mode")
-   print("                                                         |                 |       |        |         |                        |                       |           |")
-   print("     python ntk_computePolarization.py     param=computePolarization  net=NM sta=SLM  loc=DASH start=2009-11-01T00:00:00 end=2009-11-05T12:00:00 type=period  mode=0")
+   print("                                         configuration file name    net     sta      loc      cha     startDateTime           endDateTime           x-axis type          0       run with minimum message output")
+   print("                                                    |                |       |        |        |         |                        |                       |           |  plot    run in plot mode")
+   print("                                                    |                |       |        |        |         |                        |                       |           |  time    run in timing mode (to output run time for different segments of the script ")
+   print("                                                    |                |       |        |        |         |                        |                       |           |  verbose run in verbose mode")
+   print("                                                    |                |       |        |        |         |                        |                       |           |")
+   print("     python ntk_computePolarization.py param=computePolarization net=NM sta=SLM  loc=DASH cha=SLM start=2009-11-01T00:00:00 end=2009-11-05T12:00:00 type=period  mode=0")
    print(" ")
    print("\n\nOUTPUT:\n\n")
    print(" As file and/or plot as indicated by the configuration file. The polarization output file name is:")
@@ -253,7 +253,7 @@ msgLib.message("START")
 inNetwork      = getParam(args,'net',msgLib,None)
 inStation      = getParam(args,'sta',msgLib,None)
 inLocation     = staLib.getLocation(getParam(args,'loc',msgLib,None))
-inChannel      = getParam(args,'channel',msgLib,msgLib.param(param,'channel').channel)
+inChannel      = getParam(args,'cha',msgLib,None) #getParam(args,'channel',msgLib,msgLib.param(param,'channel').channel) TCB Comment 28 Sept 2020
 #channelItems   = inChannel.split(',')
 #if len(channelItems) != 3:
 #    msgLib.error("invalid channel list ('+inChannel+') must be Z,N,E",1)
@@ -418,6 +418,7 @@ for tStep in range(0,duration,msgLib.param(param,'windowShift').windowShift):
                      UTCDateTime(segmentStart),UTCDateTime(segmentEnd),1,msgLib.param(param,'performInstrumentCorrection').performInstrumentCorrection,msgLib.param(param,'applyScale').applyScale,
                      msgLib.param(param,'deconFilter1').deconFilter1, msgLib.param(param,'deconFilter2').deconFilter2, msgLib.param(param,'deconFilter3').deconFilter3, 
                      msgLib.param(param,'deconFilter4').deconFilter4, msgLib.param(param,'waterLevel').waterLevel, msgLib.param(param,'unit').unit,client)
+        
       #
       # did we manage to get the data?
       #
