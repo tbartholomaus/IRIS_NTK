@@ -418,7 +418,7 @@ for tStep in range(0,duration,msgLib.param(param,'windowShift').windowShift):
                      UTCDateTime(segmentStart),UTCDateTime(segmentEnd),1,msgLib.param(param,'performInstrumentCorrection').performInstrumentCorrection,msgLib.param(param,'applyScale').applyScale,
                      msgLib.param(param,'deconFilter1').deconFilter1, msgLib.param(param,'deconFilter2').deconFilter2, msgLib.param(param,'deconFilter3').deconFilter3, 
                      msgLib.param(param,'deconFilter4').deconFilter4, msgLib.param(param,'waterLevel').waterLevel, msgLib.param(param,'unit').unit,client)
-      breakpoint()  
+
       #
       # did we manage to get the data?
       #
