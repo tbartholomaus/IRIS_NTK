@@ -34,7 +34,9 @@ octaveWindowShift= float(1.0/8.0)   # smoothing window shift : float(1.0/4.0)= 1
 ntkDirectory     = common.ntkDirectory
 workDir          = common.workDir
 dataDirectory    = common.dataDirectory
-respDirectory    = common.respDirectory
+#respDirectory    = common.respDirectory
+respDirectory    =  "/Users/timb/Documents/syncs/OneDrive - University of Idaho/RESEARCHs/LemonCrk_GHT/Seis_analysis/RESP/"
+
 polarDbDirectory = common.polarDbDirectory # Polarization database directory where individual polarization files are stored
 
 xType            = ["period","frequency"]
@@ -168,7 +170,7 @@ normFactor = 2.0
 #
 requestClient = "FILES"
 fromFileOnly  = True # get responses from local files only. If False, will go to IRIS to get the missing responses
-fileTag       = "../../day_vols/LEMON/BBEL/"#os.path.join(dataDirectory,"SAC","*.SAC")
+fileTag       = "/Users/timb/Documents/syncs/OneDrive - University of Idaho/RESEARCHs/LemonCrk_GHT/Seis_analysis/DATA/*HH*"#"../../day_vols/LEMON/BBEL/"#os.path.join(dataDirectory,"SAC","*.SAC")
 #
 ##################################################################################
 
