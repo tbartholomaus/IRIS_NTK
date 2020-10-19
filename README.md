@@ -17,7 +17,7 @@ For *debugging* or other trouble-shooting, while modifying the function within S
 Only the parameter file `param/computePolarization.py` needs to be modified to use these scripts on local files.  There are two specific places where this file should be modified:
 1. **requestClient** should be changed from "FDSN" to "FILES".
 2. **respDirectory** should be a string (enclosed in "") with the path to an appropriate stationXML or response file.  This path should end in a forward slash (/).
-3. **fileTag** should be a string (enclosed in "") with the path to the data files, including the operative files identifed with typical glob characters, such as "path/to/files/\*HH\*"
+3. **fileTag** should be a string (enclosed in "") with the path to the data files, including the operative files identifed with typical glob characters, such as "path/to/files/\*/\*HH\*", assuming that `path/to/files` is a data path to the project, and then that every station ("\*") has its miniseed files in its own directory.
 Example use to run the code with local files is as follows:
 > nohup python -u bin/ntk_computePolarization.py param=computePolarizationLEMON net=LM sta=BBEL loc=DASH cha=HH? start=2017-06-29T00:00:00 end=2017-10-04T00:00:00 type=frequency mode=0 > BBEL.log &
 
