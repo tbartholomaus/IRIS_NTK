@@ -55,7 +55,7 @@ windowShift      = int(windowLength * 0.5) # 50% overlap
 #  NOTE: make sure that components in each group are in the CORRECT order (BHZ, BHE, BHN)
 # 
 channel          = "HH?"
-channelGroups    = [["HHZ","HHE","HHN"],["HHZ","HH2","HH1"]]
+channelGroups    = [['BHZ','BHE','BHN'],['BHZ','BH2','BH1'],["HHZ","HHE","HHN"],["HHZ","HH2","HH1"]]
 
 #
 # decon filter frequency bands, Hz
