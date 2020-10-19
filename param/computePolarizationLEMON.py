@@ -170,11 +170,8 @@ normFactor = 2.0
 #
 requestClient = "FILES"
 fromFileOnly  = True # get responses from local files only. If False, will go to IRIS to get the missing responses
-<<<<<<< HEAD
 fileTag       = "../../day_vols/LEMON/BBEL/*"#os.path.join(dataDirectory,"SAC","*.SAC")
-=======
-fileTag       = "/Users/timb/Documents/syncs/OneDrive - University of Idaho/RESEARCHs/LemonCrk_GHT/Seis_analysis/DATA/BBEL/*HH*"#"../../day_vols/LEMON/BBEL/"#os.path.join(dataDirectory,"SAC","*.SAC")
->>>>>>> bdb06cb0e79c689edee4d9e1d8213839ed2c2e03
+#fileTag       = "/Users/timb/Documents/syncs/OneDrive - University of Idaho/RESEARCHs/LemonCrk_GHT/Seis_analysis/DATA/BBEL/*HH*"
 #
 ##################################################################################
 
