@@ -34,7 +34,9 @@ octaveWindowShift= float(1.0/8.0)   # smoothing window shift : float(1.0/4.0)= 1
 ntkDirectory     = common.ntkDirectory
 workDir          = common.workDir
 dataDirectory    = common.dataDirectory
-respDirectory    = common.respDirectory
+#respDirectory    = common.respDirectory
+respDirectory    =  "/Users/timb/Documents/syncs/OneDrive - University of Idaho/RESEARCHs/LemonCrk_GHT/Seis_analysis/RESP/"
+
 polarDbDirectory = common.polarDbDirectory # Polarization database directory where individual polarization files are stored
 
 xType            = ["period","frequency"]
@@ -53,7 +55,7 @@ windowShift      = int(windowLength * 0.5) # 50% overlap
 #  NOTE: make sure that components in each group are in the CORRECT order (BHZ, BHE, BHN)
 # 
 channel          = "HH?"
-channelGroups    = [["HHZ","HHE","HHN"],["HHZ","HH2","HH1"]]
+channelGroups    = [['BHZ','BHE','BHN'],['BHZ','BH2','BH1'],["HHZ","HHE","HHN"],["HHZ","HH2","HH1"]]
 
 #
 # decon filter frequency bands, Hz
@@ -168,7 +170,11 @@ normFactor = 2.0
 #
 requestClient = "FILES"
 fromFileOnly  = True # get responses from local files only. If False, will go to IRIS to get the missing responses
+<<<<<<< HEAD
 fileTag       = "../../day_vols/LEMON/BBEL/*"#os.path.join(dataDirectory,"SAC","*.SAC")
+=======
+fileTag       = "/Users/timb/Documents/syncs/OneDrive - University of Idaho/RESEARCHs/LemonCrk_GHT/Seis_analysis/DATA/BBEL/*HH*"#"../../day_vols/LEMON/BBEL/"#os.path.join(dataDirectory,"SAC","*.SAC")
+>>>>>>> bdb06cb0e79c689edee4d9e1d8213839ed2c2e03
 #
 ##################################################################################
 

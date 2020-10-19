@@ -259,7 +259,7 @@ inChannel      = getParam(args,'cha',msgLib,None) #getParam(args,'channel',msgLi
 #    msgLib.error("invalid channel list ('+inChannel+') must be Z,N,E",1)
 #    sys.exit()
 
-inventory = None
+inventory = None#"Lemon_station.xml"#None #should actually be an obspy inventory
 respDir   = None
 respDir   = msgLib.param(param,'respDirectory').respDirectory
 #
