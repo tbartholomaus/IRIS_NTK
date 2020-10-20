@@ -26,4 +26,8 @@ Pull out all polarization attributes as a function of both time and frequency/pe
 > python bin/ntk_extractPolarHour.py param=extractPolarHour net=ZQ sta=RTBD loc=DASH chandir=HHZ_HHE_HHN start=2016-06-20T00:00:00 end=2016-10-04T00:00:00 type=frequency mode=0
 
 ### Plot polarization attributes in a spectrogram style: `ntk_spectrograms.py`
-Python script.  Run, for example through Spyder or another IDE, rather than through the terminal window.
+Python script to plot the output of `ntk_extractPolarHour.py` as a function of time and frequency.  Run, for example through Spyder or another IDE, rather than through the terminal window.
+
+### Bin polarization attributes by day: `ntk_binPolarDay.py`
+A Python script to bin polarization attributes to daily files for a given channel tag and bounding parameters.
+> python bin/ntk_binPolarDay.py param=binPolarDay net=ZQ sta=RTBD loc=DASH chandir=HHZ_HHE_HHN start=2016-06-20T00:00:00 end=2016-10-04T00:00:00 type=frequency mode=plot
